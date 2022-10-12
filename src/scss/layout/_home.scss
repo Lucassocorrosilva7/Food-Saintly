@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.home {
+  padding: 15rem 0;
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__heading {
+    span {
+      color: v.$primary;
+    }
+  }
+  &__img {
+    img {
+      width: 150rem;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+}
