@@ -1,0 +1,42 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.steps {
+  &__wave {
+    margin-bottom: -1px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: v.$primary;
+
+    :is(h2, h4) {
+      text-align: center;
+      margin: 0;
+    }
+
+    h2 {
+      color: v.$light;
+    }
+
+    h4 {
+      color: v.$light;
+      letter-spacing: 2px;
+      font-weight: 400;
+    }
+  }
+
+  &__grid {
+    @include m.tablet {
+      @include m.grid(3, v.$space);
+      place-items: center;
+    }
+  }
+
+  &__step {
+    margin: 5rem 0;
+  }
+}
