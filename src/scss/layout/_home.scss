@@ -4,10 +4,11 @@
 .home {
   padding: 15rem 0;
   &__flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
+    @include m.grid(1, 0);
+    place-items: center;
+    @include m.desktop {
+      @include m.grid(2, v.$space);
+    }
   }
   &__heading {
     span {
@@ -15,8 +16,12 @@
     }
   }
   &__img {
+    display: none;
     img {
       width: 80rem;
+    }
+    @include m.desktop {
+      display: block;
     }
   }
 
