@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.deliverys{
+    padding: v.$space;
+    &__heading{
+        text-align: center;
+        color: v.$primary;
+    }
+    &__grid{
+    @include m.desktop {
+        display: grid;
+            grid-template-columns: 40rem 1fr;
+            gap: 2rem;
+            place-items: center;
+    }
+    }
+  
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+    }
+    &__text{
+        line-height: 1.5;
+
+    }
+    &__info{
+        @include m.button (v.$primary,v.$light)
+    }
+}
