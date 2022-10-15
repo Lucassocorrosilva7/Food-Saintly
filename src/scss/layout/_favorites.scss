@@ -12,7 +12,7 @@
 
     &__grid{
         @include m.tablet {
-            @include m.grid(2,4rem)
+            @include m.grid(2,4rem);
         }
     }
 }
@@ -21,8 +21,54 @@
     background-color: v.$light;
     padding: 4rem;
     margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.2);
+   
 
     &:last-of-type{
         margin-bottom: 0;
     }
+    @include m.tablet {
+        &:last-of-type {
+                margin-bottom: 2rem;
+            }
+    }
+   &__grid{
+    @include m.tablet {
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
+        align-items: center;
+    }
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+   }
+
+   &__img{
+    max-width: 20rem;
+    margin: 0 auto 2rem auto;
+   }
+   &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.desktop {
+        align-items: flex-start;
+    }
+   }
+   &__name{
+    margin: 1rem 0;
+    color: v.$primary;
+    font-size: 2.4rem;
+   }
+
+   &__description{
+    margin: .5rem 0;
+    text-align: center;
+    @include m.tablet {
+        text-align: left;
+    }
+   }
 }
