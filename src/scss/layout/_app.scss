@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.app{
+    margin-bottom: v.$space;
+
+    &__grid{
+        background-color: #fae5c8;
+        border-radius: 1rem;
+        @include m.desktop {
+            @include m.grid(2,2rem)
+        }
+    }
+
+    &__content{
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__text{
+        text-transform: uppercase;
+        color: v.$primary;
+    }
+    &__heading{
+        color: v.$dark;
+        margin: 0;
+    }
+    &__description{
+        color: v.$dark;
+    }
+
+    &__btn{
+      &--a{
+        @include m.button(v.$primary, v.$light)
+      }
+    }
+}
