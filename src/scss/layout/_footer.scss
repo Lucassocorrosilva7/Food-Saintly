@@ -1,2 +1,24 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
+
+.footer{
+    &__grid{
+        @include m.tablet {
+        @include m.grid(4, 1rem)
+        }
+    }
+
+    h3{
+        margin: 0;
+    }
+   &__about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        display: block;
+    }
+   }
+}
