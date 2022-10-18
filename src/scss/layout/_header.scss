@@ -1,21 +1,102 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  padding: v.$space 0;
+.navbar{
+  background-color: #fae5c8;
+  height: 60px;
+  padding: .5rem calc((100vw - 1200px) / 2);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+
+ &__logo{
+  padding-left: 1rem;
+  width: 10rem;
+ }
+
+ &__toggle{
   @include m.desktop {
-    flex-direction: row;
-    justify-content: space-between;
+    display: none;
   }
-  &__logo {
-    width: 30rem;
-    margin-bottom: 5rem;
+  &--bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: v.$light;
+    display: block;
+    cursor: pointer;
+  }
+ }
+
+
+
+ #mobile-menu{
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  transform: translate(5%, 20%);
+ }
+
+ #mobile-menu.is-active .bar:nth-child(2){
+  opacity: 0;
+ }
+ #mobile-menu.is-active .bar:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+ }
+ #mobile-menu.is-active .bar:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg)
+ }
+
+ &__menu{
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+gap: 5rem;
+ position: absolute;
+ width: 100%;
+ top: -1000px;
+ 
+ @include m.desktop {
+  top: 0;
+  width: auto;
+  flex-direction: row;
+  left: 50%;
+ }
+  &--link{
+    color: v.$dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
     @include m.desktop {
-      margin-bottom: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    font-size: 1.6rem;
     }
   }
+ }
+
+ &__menu.active{
+  top: 100%;
+  opacity: 1;
+  z-index: 99;
+  height: 100vh;
+  background-color: #fae5c8;
+  @include m.desktop {
+    height: 60px;
+    top: 0;
+  }
+ }
 }
+
+ body.active {
+   overflow-y: hidden;
+   overflow-x: hidden;
+ }

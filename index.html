@@ -21,18 +21,21 @@
     <link rel="stylesheet" href="/build/css/app.css" />
   </head>
   <body>
-    <header class="header contents">
-      <div class="header__logo">
-        <img src="build/img/logo.svg" alt="Logo Deli" />
+    <nav class="navbar">
+      <a href="#" class="navbar__logo"><img src="build/img/logo.svg" alt="logo"></a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="navbar__toggle--bar bar"></span>
+        <span class="navbar__toggle--bar bar"></span>
+        <span class="navbar__toggle--bar bar"></span>
       </div>
-      <nav class="nav">
-        <a href="#" class="nav__link">Por que Saintly?</a>
-        <a href="#" class="nav__link">Serviços</a>
-        <a href="#" class="nav__link">Menu</a>
-        <a href="#" class="nav__link">Contato</a>
-        <a href="#" class="nav__link nav__link--login">Login</a>
-      </nav>
-    </header>
+      <div class="navbar__menu menu">
+        <a href="#" class="navbar__menu--link">Por que Saintly?</a>
+        <a href="#" class="navbar__menu--link">Serviços</a>
+        <a href="#" class="navbar__menu--link">Menu</a>
+        <a href="#" class="navbar__menu--link">Contato</a>
+        <!-- <a href="#" class="navbar__link nav__link--login">Login</a> -->
+      </div>
+    </nav>
     <section class="home contents">
       <div class="home__flex">
         <div class="home__content">
@@ -386,31 +389,37 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Repudiandae, inventore.
           </p>
+          <div class="footer__food--links">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
         </div>
         <div class="footer__about">
-          <h3>Sobre</h3>
-        <a href="#">teste</a>
-        <a href="#">teste</a>
-        <a href="#">teste</a>
-        <a href="#">teste</a>
-       
+          <h4>Sobre</h4>
+        <a href="#">Sobre nós</a>
+        <a href="#">Recursos</a>
+        <a href="#">Noticia</a>
+        <a href="#">Menu</a>
+        
         </div>
         <div class="footer__about">
-          <h3>Companhia</h3>
+          <h4>Companhia</h4>
+          <a href="#">Por quê Saintly</a>
           <a href="#">teste</a>
-          <a href="#">teste</a>
-          <a href="#">teste</a>
-          <a href="#">teste</a>
+          <a href="#">FAQ</a>
+          <a href="#">BLOG</a>
         </div>
         <div class="footer__about">
-          <h3>Suporte</h3>
-         <a href="#">teste</a>
-         <a href="#">teste</a>
-         <a href="#">teste</a>
-         <a href="#">teste</a>
+          <h4>Suporte</h4>
+         <a href="#">Conta</a>
+         <a href="#">Suporte</a>
+         <a href="#">Feedback</a>
+         <a href="#">Contate nos</a>
          
         </div>
       </div>
     </footer>
+    <script src="src/js/app.js"></script>
   </body>
 </html>
