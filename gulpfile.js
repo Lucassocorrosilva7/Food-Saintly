@@ -21,7 +21,7 @@ function css(done) {
   done();
 }
 
-function imagenes() {
+function imgs() {
   return src("src/img/**/*")
     .pipe(imagemin({ optimizationLevel: 3 }))
     .pipe(dest("build/img"));
@@ -51,7 +51,7 @@ function dev() {
 
 exports.css = css;
 exports.dev = dev;
-exports.imagenes = imagenes;
+exports.imgs = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.default = series(imagenes, versionWebp, versionAvif, css, dev);
+exports.default = series(imgs, versionWebp, versionAvif, css, dev);
