@@ -46,12 +46,12 @@ function versionAvif() {
 
 function dev() {
   watch("src/scss/**/*.scss", css);
-  watch("src/img/**/*", imagenes);
+  watch("src/img/**/*", imgs);
 }
 
 exports.css = css;
 exports.dev = dev;
-exports.imgs = imagenes;
+exports.imgs = imgs;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
 exports.default = series(imgs, versionWebp, versionAvif, css, dev);
