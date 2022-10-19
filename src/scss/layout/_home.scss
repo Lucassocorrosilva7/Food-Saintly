@@ -2,7 +2,10 @@
 @use "base/mixins" as m;
 
 .home {
-  padding: 15rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__flex {
     @include m.grid(1, 0);
     place-items: center;
