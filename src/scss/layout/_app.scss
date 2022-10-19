@@ -7,16 +7,23 @@
     &__grid{
         background-color: #fae5c8;
         border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         @include m.desktop {
-            @include m.grid(2,2rem)
+          flex-direction: row;
+           gap: 4rem;
         }
     }
 
     &__content{
-        padding: 5rem;
         display: flex;
+        align-items: center;
         flex-direction: column;
+        @include m.desktop {
         align-items: flex-start;
+        }
     }
 
     &__text{
@@ -29,11 +36,17 @@
     }
     &__description{
         color: v.$dark;
+        font-size: 1.4rem;
     }
 
     &__btn{
       &--a{
         @include m.button(v.$primary, v.$light)
       }
+    }
+
+    &__img{
+        width: 25rem;
+        margin-top: 2rem;
     }
 }

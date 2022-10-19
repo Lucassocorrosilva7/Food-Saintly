@@ -11,25 +11,33 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: v.$primary;
+    background: #fae5c8;
 
     :is(h2, h4) {
       text-align: center;
-      margin: 0;
+      color: v.$dark;
+    }
+
+    p{
+    text-align: center;
+    font-weight: bold;
     }
 
     h2 {
-      color: v.$light;
+      @include m.desktop {
+        font-size: 5rem;
+      }
     }
 
     h4 {
-      color: v.$light;
       letter-spacing: 2px;
       font-weight: 400;
     }
   }
 
   &__grid {
+  @include m.grid(1, v.$space);
+    place-items: center;
     @include m.tablet {
       @include m.grid(3, v.$space);
       place-items: center;
@@ -38,5 +46,6 @@
 
   &__step {
     margin: 5rem 0;
+    max-width: 20rem;
   }
 }

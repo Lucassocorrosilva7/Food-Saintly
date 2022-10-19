@@ -64,7 +64,6 @@ gap: 5rem;
   top: 0;
   gap: 2rem;
   width: auto;
-  // background-color: red;
   flex-direction: row;
   left: 50%;
  }
@@ -75,9 +74,23 @@ gap: 5rem;
     justify-content: center;
     font-size: 2rem;
     font-weight: bold;
+    
     @include m.desktop {
       height: 60px;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  &--btn{
+    background-color: v.$primary;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    color: v.$dark;
+    font-weight: bold;
+    transition: all ease 200ms;
+
+    &:hover{
+      opacity: .8;
     }
   }
  }
