@@ -15,7 +15,7 @@ Food-Saintly 🍔
 Clone este repositório usando o comando
 
 ```
-git clone https://github.com/Lucassocorrosilva7/Portfolio.git
+git clone https://github.com/Lucassocorrosilva7/Food-Saintly.git
 ```
 
 Entrar na pasta utilizando o comando:
