@@ -19,7 +19,6 @@ const removeMobileMenu = () => {
 
 
 menu.addEventListener('click', mobileMenu)
-
-link.forEach(el =>  {
-    el.addEventListener("click", removeMobileMenu)
+link.forEach(link =>  {
+    link.addEventListener("click", removeMobileMenu)
 });
